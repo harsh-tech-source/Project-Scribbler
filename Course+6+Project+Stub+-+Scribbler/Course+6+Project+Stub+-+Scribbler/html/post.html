@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ScriBBler - Post</title>
+    <!-- Included Google Fonts file -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montez&family=Roboto+Mono:wght@200&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet">
+    <!-- Included Font Awesome file -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Included style sheets -->
+    <link rel="stylesheet" type="text/css" href="../styles/common.css">
+    <link rel="stylesheet" type="text/css" href="../styles/post.css">
+</head>
+
+<body>
+    <!-- Header starts here-->
+    <header>
+
+    </header>
+    <!-- Header ends here-->
+
+    <!-- Post Details starts here -->
+    <div class="post">
+        <h3 id="post-title" contenteditable="false"></h3>
+        <div class="div-posted-by">
+            <p id="posted-by"></p>
+            <button class="post-button" id="edit-btn" onclick="changeContentEditable()">Edit <i class="fa fa-edit"
+                    aria-hidden="true"></i></button>
+            <button class="post-button" id="save-btn" onclick="changeContentEditable()">Save <i class="fa fa-floppy-o"
+                    aria-hidden="true"></i></button>
+        </div>
+        <p class="content" id='post-content' contenteditable="false"></p>
+
+        <!-- Like button details starts here -->
+        <button class="post-button" onclick="this.blur(); likePost()"><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            Like</button>
+        <p id="like-text">Be the first one to like this!</p>
+        <!-- Like button details ends here -->
+
+        <!-- Comment Section starts here -->
+        <div class="comment-area">
+            <textarea id="comment-box" placeholder="Leave a comment..." rows="5"></textarea>
+            <button class="post-button" id="comment-btn"
+                onclick="this.blur(); addComment('comment-box')">Comment</button>
+            <h4>All Comments</h4>
+            <div id="comments" class="all-comments">
+
+            </div>
+        </div>
+        <!-- Comment Section ends here -->
+    </div>
+    <!-- Post Details ends here -->
+
+    <!-- JavaScript included here -->
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+</body>
+
+</html>
